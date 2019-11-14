@@ -29,7 +29,8 @@ export class FibComponent implements OnInit {
 
   async fetchValues() {
     this.httpClient.get('/api/values/current').subscribe((res: any) => {
-      this.state.values = res.data;
+      console.log(res);
+      this.state.values = res;
     });
   }
 
